@@ -2,7 +2,7 @@
     /* Color Palette */
     --color-background: #000000;
     --color-text: #ffffff;
-    --color-accent: #c2ff0e;
+    --color-accent: #0e5aff;
     --color-link: #ffffff;
 
     /* Typography */
@@ -86,8 +86,8 @@ a:hover {
 a:focus-visible {
     outline: 2px solid var(--color-accent);
     outline-offset: 1px;
-    border-radius: 4px;
-    background-color: #242526;
+    border-radius: 2px;
+    background-color: #191919;
     border-bottom: none; 
 
 
