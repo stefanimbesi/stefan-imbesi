@@ -1,0 +1,214 @@
+:root {
+    /* Color Palette */
+    --color-background: #000000;
+    --color-text: #ffffff;
+    --color-accent: #c2ff0e;
+    --color-link: #ffffff;
+
+    /* Typography */
+    --font-primary: 'DM Sans', sans-serif;
+
+    /* Spacing */
+    --spacing-small: 0.5rem;
+    --spacing-medium: 1rem;
+    --spacing-large: 2rem;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    cursor: none; /* Hides cursor */
+}
+
+::selection {
+    background: var(--color-accent);
+    color: var(--color-background); /* Ensures contrast for readability */
+}
+
+::-moz-selection {
+    background: var(--color-accent);
+    color: var(--color-background);
+}
+
+body {
+    font-family: var(--font-primary);
+    line-height: 1.6;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    padding: var(--spacing-medium);
+
+    /* Improved text rendering */
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+/*    /* Hide the default cursor */
+    cursor: none;*/
+}
+
+.content {
+    margin: 0; /* Remove auto margin to keep content in the top-left */
+    padding: var(--spacing-small);
+    max-width: 600px; /* Constrain the width of the content */
+    width: 100%; /* Ensure it takes full width up to the max-width */
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+    font-size: 14px; /* Unifying all headings */
+    font-weight: normal;
+    text-wrap: balance;
+}
+
+h2, p {
+    padding-bottom: var(--spacing-medium);
+}
+
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s ease, transform 0.2s ease, border-bottom 0.3s ease;
+    border-bottom: 1px solid var(--color-accent);
+    padding-bottom: 1px;
+}
+
+a:hover {
+    color: var(--color-accent);
+}
+
+/* Focus Styles for Accessibility */
+a:focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 1px;
+    border-radius: 2px;
+    background-color: #242526;
+    border-bottom: none; /* Hide border-bottom on focus */
+
+}
+
+.social-links a {
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Custom Cursor Styles */
+.cursor {
+    position: fixed;
+    pointer-events: none;
+    z-index: 9999;
+    mix-blend-mode: difference; /* Blend mode for contrast */
+}
+
+/* Base styles for the cursor balls */
+.cursor__ball {
+    position: fixed;
+    width: 16px;  /* Adjust as needed */
+    height: 16px;
+    background: white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%); /* Centers it properly */
+    pointer-events: none; /* Prevents interference */
+    top: 0; /* Ensures proper positioning */
+    left: 0;
+    opacity: 0; /* Hide by default */
+}
+
+/* Big ball */
+.cursor__ball--big {
+    width: 24px;
+    height: 24px;
+    background-color: var(--color-accent);
+    transition: opacity 0.3s ease;
+}
+
+/* Small ball */
+.cursor__ball--small {
+    width: 8px;
+    height: 8px;
+    background-color: var(--color-background);
+}
+
+/* Hover effect to grow the cursor */
+.cursor__ball--big.hover {
+    width: 16px;
+    height: 16px;
+}
+
+/* Scale down on click */
+.cursor__ball--big.click {
+    transform: scale(0.7);
+}
+
+/* Text Reveal Animation Styles */
+.container {
+    width: 100%; /* Take full width */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align content to the left */
+    justify-content: flex-start; /* Align content to the top */
+}
+
+.line {
+    width: 100%; /* Full width */
+    height: auto; /* Let the height adjust to content */
+    position: relative;
+    margin-bottom: 10px; /* Default margin for lines */
+}
+
+/*Name and Title */
+.line.name {
+    margin-bottom: 0; /* No margin between name and title */
+}
+
+.line.title {
+    margin-bottom: var(--spacing-medium); /* Add extra space below the title */
+}
+
+/*About Text */
+.line.about {
+    margin-bottom: var(--spacing-medium); /* Add extra space below the about text */
+}
+
+/* Social Links */
+.line.social {
+    margin-bottom: 0; /* No margin between social links */
+}
+
+
+.line span {
+    position: relative; 
+    display: inline-block; 
+    font-size: 14px; 
+    line-height: 1.5; 
+    opacity: 0; 
+    transform: translateY(100%);
+
+}
+
+
+/* Mobile Styles */
+@media (max-width: 500px) {
+    body {
+        padding: var(--spacing-small);
+    }
+
+    .line span {
+        will-change: transform, opacity;
+        font-size: 16px;
+    }
+
+    a {
+        color: var(--color-text);
+        text-decoration: none; 
+        font-size: 16px;
+        border-bottom: 1px solid var(--color-accent); 
+        padding-bottom: 1px; 
+        transition: border-bottom 0.3s ease;
+    }
+
