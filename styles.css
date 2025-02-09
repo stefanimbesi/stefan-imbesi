@@ -46,11 +46,9 @@ body {
     /* Improved text rendering */
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+        -moz-osx-font-smoothing: grayscale;
+    }
 
-/*    /* Hide the default cursor */
-    cursor: none;
-}
 
 .content {
     margin: 0; /* Remove auto margin to keep content in the top-left */
