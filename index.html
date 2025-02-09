@@ -49,57 +49,69 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <main class="content">
-        <section class="about-section" aria-labelledby="about-heading">
-            <!-- Text Reveal Animation -->
-            <div class="container">
-                <!-- Group 1: Name and Title -->
-                <div class="line name">
-                    <span id="about-heading">Stefan Imbesi</span>
-                </div>
-                <div class="line title">
-                    <span class="subtitle">Digital Art Director</span>
-                </div>
-                
-                <!-- Group 2: About Text -->
-                <div class="about-text">
-                    <div class="line about">
-                        <span>A detail-oriented designer living in Melbourne, dedicated to curating compelling digital experiences, services, websites, applications, and technology at 
-                            <a href="https://www.august.com.au/" target="_blank" rel="noopener noreferrer" class="hoverable">August</a>.
-                        </span>
-                    </div>
-                    
-                    <!-- Group 3: Social Links -->
-                    <div class="social-links">
-                        <div class="line social">
-                            <span>
-                                <a href="https://www.instagram.com/tefansay/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" class="hoverable">
-                                    Instagram
-                                </a>
-                            </span>
-                        </div>
-                        <div class="line social">
-                            <span>
-                                <a href="mailto:hey@stefan-imbesi.com" aria-label="Email Contact" class="hoverable">
-                                    Contact
-                                </a>
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
+	<main class="content">
+		<section class="about-section" aria-labelledby="about-heading">
+			<!-- Text Reveal Animation -->
+			<div class="container">
+				<!-- Name and Title -->
+				<div class="line name">
+					<span id="about-heading">Stefan Imbesi</span>
+				</div>
+				<div class="line title">
+					<span class="subtitle">Digital Art Director</span>
+				</div>
 
-    <!-- Custom Cursor -->
-    <div class="cursor" aria-hidden="true">
-        <div class="cursor__ball cursor__ball--big"></div>
-        <div class="cursor__ball cursor__ball--small"></div>
-    </div>
+				<!--About Text -->
+				<div class="about-text">
+					<div class="line about">
+						<div class="about-mobile">
+							<span class="line-1">A detail-oriented designer living in Melbourne,</span>
+							<span class="line-2">dedicated to curating compelling digital </span>
+							<span class="line-3">experiences, services, websites, applications</span>
+							<span class="line-4">and technology at
+								<a href="https://www.august.com.au/" target="_blank" rel="noopener noreferrer" class="hoverable">August</a>.
+							</span>
+						</div>
 
-    <!-- GSAP Library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
-    <!-- Link to main.js -->
-    <script src="main.js" defer></script>
+						<div class="about-desktop">
+							<span class="line-1">A detail-oriented designer living in Melbourne, dedicated to curating compelling digital </span>
+							<span class="line-2">experiences, services, websites, applications, and technology at
+								<a href="https://www.august.com.au/" target="_blank" rel="noopener noreferrer" class="hoverable">August</a>.
+							</span>
+						</div>
+					</div>
+
+					<!-- Social Links -->
+					<div class="social-links">
+						<div class="line social">
+							<span>
+								<a href="https://www.instagram.com/tefansay/" target="_blank" rel="noopener noreferrer" aria-label="Instagram Profile" class="hoverable">
+									Instagram
+								</a>
+							</span>
+						</div>
+						<div class="line social">
+							<span>
+								<a href="mailto:hey@stefan-imbesi.com" aria-label="Email Contact" class="hoverable">
+									Contact
+								</a>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<!-- Cursor -->
+	<div class="cursor" aria-hidden="true">
+		<div class="cursor__ball cursor__ball--big"></div>
+		<div class="cursor__ball cursor__ball--small"></div>
+	</div>
+
+	<!-- GSAP Library -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+	<!-- Link to main.js -->
+	<script src="main.js" defer></script>
 </body>
 </html>
